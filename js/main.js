@@ -78,8 +78,6 @@ function sleep(){
 
     if (email.value!=""){
         Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "camera.sleep.app@gmail.com",
             SecureToken : "675a8e87-4d91-4512-a541-36668dbe915a",
             To : email.value,
             From : "camera.sleep.app@gmail.com",
