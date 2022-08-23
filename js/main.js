@@ -76,19 +76,20 @@ function sleep(){
     //メール送信設定
     const email=document.getElementById('email');
 
-    const templateVariables = {
-        email: email.value,
-    };
     if (email.value!=""){
-        emailjs.send('service_3xpkbkv','template_1pe7qh5',templateVariables)
-        .then(function() {
-            console.log('SUCCESS!');
-            window.alert("メールを送信しました");
-            }, function(error) {
-                console.log('FAILED...', error);
-                window.alert("メールの送信に失敗しました。アドレスが間違っている可能性があります。");
-            });
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "camera.sleep.app@gmail.com",
+            SecureToken : "675a8e87-4d91-4512-a541-36668dbe915a",
+            To : email.value,
+            From : "camera.sleep.app@gmail.com",
+            Subject : "Wake Up!",
+            Body : "Wake Up!"
+        }).then(
+            message => alert(message)
+          );
     };
+    
     //メール送信設定終わり
 }
 

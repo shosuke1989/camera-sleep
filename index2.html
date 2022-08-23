@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <p onclick="sendDoc()">aa</p>
+    </head>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        const sendDoc = () => {
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "camera.sleep.app@gmail.com",
+            Password : "D497C8D2929C34CEC68810396A3AF4846562",
+            To : 'shosuke.k.1989@gmail.com',
+            From : "camera.sleep.app@gmail.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+            message => alert(message)
+        );
+        }
+    </script>
+
+
+
