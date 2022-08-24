@@ -78,7 +78,7 @@ function sleep(){
 
     if (email.value!=""){
         Email.send({
-            SecureToken : "5b7d5176-92d1-4cea-9c6d-48b08a100a70",
+            SecureToken : "7ec0102f-ed83-4584-b1d5-5337d26c99a1",
             To : email.value,
             From : "camera.sleep.app@gmail.com",
             Subject : "Wake Up!",
