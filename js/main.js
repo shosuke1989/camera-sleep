@@ -78,15 +78,18 @@ function sleep(){
 
     if (email.value!=""){
         Email.send({
-            SecureToken : "675a8e87-4d91-4512-a541-36668dbe915a",
+            SecureToken : "991229d4-72d8-44f5-b3bd-7143f48ee695",
             To : email.value,
             From : "camera.sleep.app@gmail.com",
             Subject : "Wake Up!",
             Body : "Wake Up!"
-        }).then(
-            message => alert(message)
-          );
+        }).then(function(message) {
+            console.log(message);
+            window.alert("メールを送信しました");
+            })
     };
+
+
     
     //メール送信設定終わり
 }
